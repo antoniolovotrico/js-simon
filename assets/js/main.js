@@ -10,6 +10,12 @@ $(function(){
     //array vuoto da riempire con i numeri indovinati dall'utente
     var numIndovinati = [];
 
+    //variabile rappresentante del div box_num nell'htlml
+    var boxNum = document.getElementById("rnd_arr");
+
+    //variabile rappresentante del div messagio nell'htlml
+    var message = document.getElementById("message");
+
     //ciclo while fin quando nell'array non saranno presenti 5 numeri differenti
     while (rndArray.length < 5) {
         var rndNum = (Math.floor((Math.random() * 100) + 1));
@@ -19,22 +25,21 @@ $(function(){
         }       
     } 
     //scrivi l'array nell'html
-    document.getElementById("rnd_arr").innerHTML = rndArray;
+    boxNum.innerHTML = rndArray;
     
     // imposta timeout di 30sec per la visualizzazione dei 5 numeri da memorizzare
     setTimeout(function() {
         $("#rnd_arr").hide();
-    },3000);
-       
-     
+    },30000);
+          
     // ad un secondo di distanza dalla scomparsa dell'elenco di numeri chiedere singolarmente per ogni prompt ognuno dei cinque numeri da ricordare
     setTimeout(function() {
 
-        var num1 =  Number(prompt("inserisci il primo dei cinque numeri che ricordi"));
-        var num2 =  Number(prompt("inserisci il secondo dei cinque numeri che ricordi"));
-        var num3 =  Number(prompt("inserisci il terzo dei cinque numeri che ricordi"));
-        var num4 =  Number(prompt("inserisci il quarto dei cinque numeri che ricordi"));
-        var num5 =  Number(prompt("inserisci il quinto dei cinque numeri che ricordi"));
+        var num1 =  Number(prompt("Inserisci il primo dei cinque numeri che ricordi"));
+        var num2 =  Number(prompt("Inserisci il secondo dei cinque numeri che ricordi"));
+        var num3 =  Number(prompt("Inserisci il terzo dei cinque numeri che ricordi"));
+        var num4 =  Number(prompt("Inserisci il quarto dei cinque numeri che ricordi"));
+        var num5 =  Number(prompt("Inserisci il quinto dei cinque numeri che ricordi"));
 
         //inserire i numeri scelti dall'utente nell'array preposto
         numInseriti.push(num1 , num2 , num3 , num4 , num5);
@@ -47,8 +52,8 @@ $(function(){
                 console.log(numIndovinati);
             } 
         }
-        alert("I numeri che hai indovinato sono" +""+ numIndovinati +""+ "per un totale di"+""+ numIndovinati.length +""+ "numeri");
+        message.innerHTML = "I numeri che hai indovinato sono" +" "+ numIndovinati +" "+ "per un totale di"+" "+ numIndovinati.length +" "+ "numeri";
         
-    },4000);      
+    },31000);      
 
 });
