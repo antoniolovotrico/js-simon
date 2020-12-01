@@ -25,7 +25,7 @@ $(function(){
         }       
     } 
     //scrivi l'array nell'html
-    boxNum.innerHTML = rndArray;
+    boxNum.innerHTML = "Memorizza questi cinque numeri, hai trenta secondi di tempo!!" +" "+ rndArray;
     
     // imposta timeout di 30sec per la visualizzazione dei 5 numeri da memorizzare
     setTimeout(function() {
