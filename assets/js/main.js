@@ -47,7 +47,7 @@ $(function(){
                 console.log(numIndovinati);
             } 
         }
-        alert("hai indovinato" +""+ numIndovinati +""+ "per un totale di"+""+ numIndovinati.length +""+ "numeri");
+        alert("I numeri che hai indovinato sono" +""+ numIndovinati +""+ "per un totale di"+""+ numIndovinati.length +""+ "numeri");
         
     },4000);      
 
