@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 body {
-    background-color: gray;
+    background-color: #252850;
 }
 
 .box_num {
-    background-color: aliceblue;
+    background-color: #fffeef;
     margin: 100px;
     height: 85vh;
     justify-content: center;
     display: flex;
     align-items: center;
     font-size: 4rem;
-    border: 1px solid lightgray;
-    box-shadow: 2px 2px 50px lightgray;
+    border: 1px solid #f7e89f;
+    box-shadow: 2px 2px 100px #fffeef;
     border-radius: 100%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;

@@ -52,8 +52,7 @@ $(function(){
                 console.log(numIndovinati);
             } 
         }
-        message.innerHTML = "I numeri che hai indovinato sono" +" "+ numIndovinati +" "+ "per un totale di"+" "+ numIndovinati.length +" "+ "numeri";
-        
+        message.innerHTML = "I numeri che hai indovinato sono" +" "+ numIndovinati +" "+ "per un totale di"+" "+ numIndovinati.length +" "+ "numeri";     
     },31000);      
 
 });
