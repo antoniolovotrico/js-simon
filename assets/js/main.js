@@ -35,15 +35,12 @@ $(function(){
     // ad un secondo di distanza dalla scomparsa dell'elenco di numeri chiedere singolarmente per ogni prompt ognuno dei cinque numeri da ricordare
     setTimeout(function() {
 
-        var num1 =  Number(prompt("Inserisci il primo dei cinque numeri che ricordi"));
-        var num2 =  Number(prompt("Inserisci il secondo dei cinque numeri che ricordi"));
-        var num3 =  Number(prompt("Inserisci il terzo dei cinque numeri che ricordi"));
-        var num4 =  Number(prompt("Inserisci il quarto dei cinque numeri che ricordi"));
-        var num5 =  Number(prompt("Inserisci il quinto dei cinque numeri che ricordi"));
-
-        //inserire i numeri scelti dall'utente nell'array preposto
-        numInseriti.push(num1 , num2 , num3 , num4 , num5);
-        console.log(numInseriti);
+        // Ciclo while per creare vari prompt da inserire in un array
+        while (numInseriti.length < rndArray.length) {
+            var numIns =  Number(prompt("Inserisci uno dei cinque numeri che ricordi"));
+            numInseriti.push(numIns);
+            console.log(numInseriti);
+        }
         
         //creare ciclo for che confronta i numeri scelti dall'utente con quelli random per un numero volte pari alla lunghezza dell'array
         for (var i = 0; i < numInseriti.length; i++) {
